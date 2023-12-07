@@ -1,4 +1,4 @@
-package d1;
+package d1TwoDimension;
 
 public class TwoDimension {
   public static void deltaSearch() {

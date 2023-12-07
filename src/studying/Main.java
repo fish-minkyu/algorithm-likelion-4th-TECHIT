@@ -1,3 +1,4 @@
+package studying;// 스택 관련 문제 12.06 문제에서 확인해보기
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

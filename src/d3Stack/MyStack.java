@@ -1,4 +1,4 @@
-package d3;
+package d3Stack;
 
 // int 데이터를 스택의 형태로 관리할 수 있는 클래스
 public class MyStack {

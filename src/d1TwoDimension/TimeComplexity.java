@@ -1,4 +1,4 @@
-package d1;
+package d1TwoDimension;
 
 public class TimeComplexity { // 시간복잡도
   // 자연수 n을 받아서

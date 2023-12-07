@@ -1,5 +1,7 @@
-package boj;// 고무오리 디버
+package boj;
+// 고무오리 디버
 // https://www.acmicpc.net/status?user_id=e951219&problem_id=20001&from_mine=1
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
