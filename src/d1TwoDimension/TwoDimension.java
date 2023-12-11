@@ -1,5 +1,6 @@
 package d1TwoDimension;
 
+// 이차원 배열
 public class TwoDimension {
   public static void deltaSearch() {
     // 0은 공원, 1은 장매물
@@ -38,6 +39,7 @@ public class TwoDimension {
     }
 
     // delta 탐색
+    // 방향에 따른 좌표를 먼저 설정해준다.
     int[][] deltas = new int[][] {
       // N 방향으로 갈 때 좌표 변경
       {-1, 0},
@@ -49,6 +51,7 @@ public class TwoDimension {
       {0, 1}
     };
     int[] delta = null;
+    // switch에서는 방향에 따른 delta만 정해준다.
     switch (direction) {
       case "N":
         delta = deltas[0];

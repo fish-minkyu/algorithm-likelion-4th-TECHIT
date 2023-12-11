@@ -1,4 +1,4 @@
-package studying;
+package programmers;
 // 공원 산책
 // https://school.programmers.co.kr/learn/courses/30/lessons/172928
 public class Solution172928 {
@@ -32,7 +32,7 @@ public class Solution172928 {
       if (found) break;
     }
 
-    // 1. 델타 탐색 없이 진행 => 복잡함
+    // A. 델타 탐색 없이 진행 => 복잡함
     // 각각의 이동 명령마다 움직인다.
 //    for (String route : routes) {
 //      // 이번 명령 정보 정제
@@ -58,7 +58,7 @@ public class Solution172928 {
 //    }
 
 
-    // 2. 델타 배열을 만들고 델타 탐색 (각각의 방향에 따라서 배열을 저장)
+    // B. 델타 배열을 만들고 델타 탐색 (각각의 방향에 따라서 배열을 저장)
     int[][] deltas = new int[][] {
       {-1, 0}, // N
       {1, 0}, // S
@@ -102,6 +102,7 @@ public class Solution172928 {
           answer[0] + distance * delta[0] < height;
       // 위의 조건이 다 참이여야 이 경로로 이동이 가능하다.
       if (!(withinHeight && withinWidth)) continue;
+
       // 2. 가는 길에 장애물은 없는지?
       boolean blocked = false;
       // 1부터 거리까지 순회
