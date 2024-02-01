@@ -81,7 +81,7 @@
 
 [백준 예시 문제](https://www.acmicpc.net/problem/3003)
 ```java
-public class Main {
+public class MainNumberBaseball {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String line = reader.readLine(); // 0 1 2 2 2 7
@@ -100,7 +100,7 @@ public class Main {
 배열과 같이 선언하되, 대괄호(`[]`)를 두번 사용한다.
 
 ```java
-public class Main {
+public class MainNumberBaseball {
     public static void main(String[] args) {
         // 3 * 3의 크기의 행렬
         int[][] matrix = new int[3][3];
@@ -120,7 +120,7 @@ public class Main {
 또는 데이터를 직접 할당한다.
 
 ```java
-public class Main {
+public class MainNumberBaseball {
     public static void main(String[] args) {
         int[][] matrix = new int[][]{
                 {1, 2, 3},

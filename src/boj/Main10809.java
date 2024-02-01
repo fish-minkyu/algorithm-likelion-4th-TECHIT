@@ -1,4 +1,5 @@
-package boj;// 알파벳 찾기
+package boj;
+// 알파벳 찾기
 // https://www.acmicpc.net/status?user_id=e951219&problem_id=10809&from_mine=1
 import java.io.BufferedReader;
 import java.io.IOException;
