@@ -39,4 +39,5 @@ public class Solution181932 {
   public static void main(String[] args) {
     System.out.println(solution("abc1abc1abc"));
   }
+  
 }

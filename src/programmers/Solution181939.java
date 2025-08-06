@@ -16,6 +16,7 @@ class Solution181939 {
 //    }
 //  }
   public int solution(int a, int b) {
+    // StringBuilder로 문자열을 만드는 것이 더 빠르다.
     // StringBuilder aBuilder = new StringBuilder();
     // aBuilder.append(a).append(b)
 

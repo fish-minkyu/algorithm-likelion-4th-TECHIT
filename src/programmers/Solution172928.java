@@ -15,7 +15,7 @@ public class Solution172928 {
     }
 
     // 시작지점 찾기
-    // char[i][j] === 's'인 곳이 시작지점
+    // char[i][j] == 's'인 곳이 시작지점
     // answer[0] = i, answer[1] = j
     int[] answer = new int[2];
     // 높이 먼저 해준다.
