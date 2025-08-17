@@ -1,55 +1,32 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        new Main().solution();
-    }
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-    public void solution() throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(br.readLine());
-        String[] myCardString = br.readLine().split(" ");
+        String[] arr = reader.readLine().split(" ");
+        int N = Integer.parseInt(arr[0]);
+        int M = Integer.parseInt(arr[1]);
 
-        int M = Integer.parseInt(br.readLine());
-        String[] inCards = br.readLine().split( " ");
-        br.close();
+        int[] baskets = new int[N];
+        for (int i = 0; i < M; i++) {
+            String[] info = reader.readLine().split(" ");
+            int start = Integer.parseInt(info[0]);
+            int end = Integer.parseInt(info[1]);
+            int ball = Integer.parseInt(info[2]);
 
-        // 이진 탐색
-        int[] myCards = new int[N];
-        for (int i = 0; i < N; i++) {
-            myCards[i] = Integer.parseInt(myCardString[i]);
+            for (int j = start -1; j < end; j++) {
+                baskets[j] = ball;
+            }
         }
 
-        Arrays.sort(myCards);
-
         StringBuilder answer = new StringBuilder();
-        for (String str : inCards) {
-            int result = binarySearch(myCards, Integer.parseInt(str)) ? 1 : 0;
-            answer.append(result).append(" ");
+        for (int i = 0; i < N; i++) {
+            answer.append(baskets[i]).append(" ");
         }
 
         System.out.println(answer);
-    }
-
-  // 이진탐색 메소드
-    public boolean binarySearch(int[] arr, int target) {
-      int low = 0;
-      int high = arr.length -1;
-
-      while (low <= high) {
-          int mid = low + (high - low) / 2;
-
-          if (arr[mid] == target) return true;
-          else if (arr[mid] < target) {
-              low = mid + 1;
-          } else {
-              high = mid - 1;
-          }
-      }
-
-      return false;
     }
 }
