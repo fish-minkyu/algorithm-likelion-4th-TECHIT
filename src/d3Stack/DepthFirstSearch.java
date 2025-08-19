@@ -1,4 +1,4 @@
-package d3Stack;
+package boj.d3Stack;
 
 import java.util.ArrayList;
 import java.util.List;
