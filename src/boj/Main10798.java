@@ -8,9 +8,9 @@ import java.io.InputStreamReader;
 public class Main10798 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        // 다섯줄이 주어지지만, 각 줄의 길이는 주어지지 않는다.
+        // 다섯 줄이 주어지지만(행은 주어지지만), 각 줄의 길이(열의 길이)는 주어지지 않는다.
         char[][] letters = new char[5][];
-        // 한줄의 최대 길이를 저장해둔다.
+        // 한 줄의 최대 길이를 저장해둔다.
         int maxLength = 0;
         for (int i = 0; i < 5; i++) {
             // 각 줄을 받아 letters[i]에 한번에 저장한다.
@@ -20,19 +20,20 @@ public class Main10798 {
         }
 
         // 출력을 담을 StringBuilder
-        StringBuilder answerBuilder = new StringBuilder();
-        // 가장 긴 가로줄만큼 순회한다.
+        StringBuilder answer = new StringBuilder();
+        // 각 행들의 자릿수 순으로 순회.
+        // 가장 긴 가로줄만큼 순회한다. (i는 열을 의미한다.)
         for (int i = 0; i < maxLength; i++) {
-            // 다섯줄이기 때문에 다섯번 순회한다.
+            // 다섯 행이기 때문에 다섯번 순회한다. (j는 행을 의미한다.)
             for (int j = 0; j < 5; j++) {
-                // 만약 j번 줄의 크기가 maxLength에 대돌하지 못한다면,
-                // 확인하지 않는다.
+                // 만약 j번 줄의 크기가 maxLength보다 작다면 확인하지 않는다.
+                // (j번 줄의 i번째 자리가 없으므로 확인하지 않는다.)
                 if (!(i < letters[j].length)) continue;
                 // 그 외에는 저장
-                answerBuilder.append(letters[j][i]);
+                answer.append(letters[j][i]);
             }
         }
         // 결과 출력
-        System.out.println(answerBuilder);
+        System.out.println(answer);
     }
 }
